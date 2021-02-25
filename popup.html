@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="DESIGN.css">
+    <title>Web Encrypter</title>
     <style type="text/css">
         body {
            height: 300px;
         }
     </style>
-    <link rel="stylesheet" href="DESIGN.css" >
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="padding: 10%;">
-    <h1 style="padding: 10%;">WhatsApp Encrypter</h1>
+<body style="padding: 5%;">
+    <h1 style="border: auto;">WEB ENCRYPTER</h1>
     <form>
+		<div>
         <label>Enter Text Here</label><br>
-        <input type="text"><br>
+		<textarea name="message" class="textbox" style="height: 4em;"></textarea>
+		<button class="paste">Paste Highlighted</button><br>
+		</div>
+
+		<br><br>
+
+		<div>
         <label>Enter Password</label><br>
-        <input type="text"><br>
-        <button>Encrypt</button>
-        <button>Decrypt</button>
-       
+        <textarea name="password" class="textbox" style="height: 2em;"></textarea>
+		<button class="paste">Paste Highlighted</button><br>
+		</div>
+
+		<br><br><br>
+
+		<div>
+        <button class="submit">Encrypt</button>
+        <button class="submit">Decrypt</button>
+		</div>
     </form>
 </body>
 </html>
