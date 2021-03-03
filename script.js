@@ -39,7 +39,6 @@ function encrypt(meat, salt, multiplier) {
     return string(bacon);
 }
 
-
 function decrypt(bacon, salt, multiplier, print_mode) {
 	var instance, i, a, b, c;
 	var bacon_length = bacon.length;
