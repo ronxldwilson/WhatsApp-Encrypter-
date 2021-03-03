@@ -90,7 +90,7 @@ function shuffle_salt(salt, instance) {
 			}
 		}
     }
-	return string(salt)
+	return string(salt);
 }
 
 
