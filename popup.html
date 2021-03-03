@@ -5,37 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Encrypter</title>
-    <style type="text/css">
-        body {
-           height: 300px;
-        }
-    </style>
+
     <link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
 </head>
 
-<body style="padding: 5%;">
-    <h1 style="border: auto;">WEB ENCRYPTER</h1>
-    <form>
-		<div>
-        <label>Enter Text Here</label><br>
-		<textarea name="message" class="textbox" style="height: 4em;"></textarea>
-		<button class="paste">Paste Highlighted</button><br>
+<body style="padding: 3%;">
+    
+	<div class="main">
+		<div class="navbar">
+			<h1>WEB ENCRYPTER</h1>
+			<button class="settings"><img src="settings.png" style="width: 40px; vertical-align: baseline;"></img></button>
 		</div>
 
-		<br><br>
+		<hr class="navsep"/>
+		<br/>
 
-		<div>
-        <label>Enter Password</label><br>
-        <textarea name="password" class="textbox" style="height: 2em;"></textarea>
-		<button class="paste">Paste Highlighted</button><br>
+		<div class="form">
+			<div>
+			<label>Enter Text Here</label><br>
+			<textarea id="message" class="textbox" style="height: 4em;">Hello</textarea>
+			<div class="space"></div>
+			<button class="paste">Paste Highlighted</button><br>
+			</div>
+
+			<br><hr/><br>
+
+			<div>
+			<label>Enter Password</label><br>
+			<textarea id="password" class="textbox" style="height: 2em;">Pass</textarea><br>
+			<div class="space"></div>
+			<button class="paste">Paste Highlighted</button><br>
+			</div>
+
+			<br><hr/>
+
+			<div>
+			<button class="submit" onclick="encryption_process()" id="encrypt">Encrypt</button>
+			<button class="submit" onclick="decryption_process()" id="decrypt">Decrypt</button>
+			</div>
+
+			<hr/>
+
+			<div class="Result">
+			<p id="InsertResultHere"></p>
+			</div>
 		</div>
-
-		<br><br><br>
-
-		<div>
-        <button class="submit">Encrypt</button>
-        <button class="submit">Decrypt</button>
-		</div>
-    </form>
+	</div>
 </body>
 </html>
