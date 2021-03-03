@@ -13,6 +13,11 @@ h1 {
 	float: left;
 }
 
+@font-face {
+	font-family: 'Avantgarde';
+	src: url(Fonts/avantgarde-bk-bt-2-cufonfonts-webfont/AVGARDD_2.woff);
+}
+
 hr {
 	background: rgb(0,255,221);
 	background: linear-gradient(90deg, rgba(0,255,221,1) 0%, rgba(255,0,254,1) 100%);
@@ -21,11 +26,6 @@ hr {
 	height: 0.1px;
 	border-width: 1px;
 	border-color: #EEE;
-}
-
-@font-face {
-	font-family: 'Avantgarde';
-	src: url(Fonts/avantgarde-bk-bt-2-cufonfonts-webfont/AVGARDD_2.woff);
 }
 
 .form {
@@ -40,6 +40,7 @@ button {
 	cursor: pointer;
 	background: transparent;
 	transition-duration: 0.1s;
+	outline: none;
 
 	border-width: 2px;
 	border-radius: 4px;
@@ -107,7 +108,7 @@ button {
 
 .settings {
 	background: transparent;
-	padding: 0;
+	padding: 2px;
 	margin: 2px;
 	border: none;
 	float: right;
