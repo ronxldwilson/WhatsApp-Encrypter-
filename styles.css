@@ -32,10 +32,6 @@ hr {
 	padding: 0 6% 6% 6%;
 }
 
-textarea {
-	resize: none;
-}
-
 button {
 	cursor: pointer;
 	background: transparent;
@@ -113,10 +109,6 @@ button {
 	border: none;
 	float: right;
 	box-shadow: none;
-}
-
-.textbox {
-	width: 75%;
 }
 
 .space {
