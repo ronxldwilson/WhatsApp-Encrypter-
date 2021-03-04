@@ -11,19 +11,23 @@ var GRINDER_CAPACITY = 95;
 
 
 function encryption_process() {
+	console.log("New Encryption Request");
+
 	var message = document.getElementById("message").value;
 	var password = document.getElementById("password").value;
 
 	var result = encrypt(message, password, 4);
-	document.getElementById("InsertResultHere").innerHTML = result;
+	document.getElementById("InsertResultHere").innerHTML = escapeHTML(result);
 }
 
 function decryption_process() {
+	console.log("New Decryption Request");
+
 	var message = document.getElementById("message").value;
 	var password = document.getElementById("password").value;
 
 	var result = decrypt(message, password, 4, false);
-	document.getElementById("InsertResultHere").innerHTML = result;
+	document.getElementById("InsertResultHere").innerHTML = escapeHTML(result);
 }
 
 
@@ -42,12 +46,12 @@ function encrypt(meat, salt, multiplier) {
             a = char_grinder(bacon[i], 'CHAR');
             b = char_grinder(salt[i%salt_length], 'CHAR');
             c = (a + b + i%salt_length)%GRINDER_CAPACITY;
-            bacon[i] = char_grinder(c, 'NUM');
+			bacon[i] = char_grinder(c, 'NUM');
 		}
+		console.log(bacon);
 	}
     return string(bacon);
 }
-
 
 function decrypt(bacon, salt, multiplier, print_mode) {
 	var instance, i, a, b, c;
@@ -68,16 +72,16 @@ function decrypt(bacon, salt, multiplier, print_mode) {
                 c = (a - b - i%salt_length)%GRINDER_CAPACITY;
             
             //c = (a - b - i%salt_length)%GRINDER_CAPACITY;
-            
+
             if(print_mode)
                 print(char_grinder(c, "NUM"));
             else
                 meat[i] = char_grinder(c,  'NUM');
 		}
+		console.log(meat);
 	}
     return string(meat);
 }
-
 
 function shuffle_salt(salt, instance) {
 	salt = salt.split('');
@@ -101,25 +105,23 @@ function shuffle_salt(salt, instance) {
 	return string(salt);
 }
 
-
 function char_grinder(package, package_type) {
     alphabet = " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~".split('');
-    
+
 	if(package_type == "CHAR") {
-        return alphabet.indexOf(package);
+		return alphabet.indexOf(package);
 	}
     if(package_type == "NUM") {
-        return alphabet[package];
+		return alphabet[package];
 	}
 }
-
 
 function string(list) {
     return list.join('');
 }
 
 
-
+//Show/Hide Password Checkbox
 function password_checkbox() {
 	var x = document.getElementById("password");
 	if (x.type === "password") {
@@ -129,3 +131,13 @@ function password_checkbox() {
 		x.type = "password";
 	}
 }
+
+//To escape unsafe characters before pasting to innerHTML
+function escapeHTML(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
