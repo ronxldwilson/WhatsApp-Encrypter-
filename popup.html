@@ -7,7 +7,6 @@
     <title>Web Encrypter</title>
 
     <link rel="stylesheet" href="styles.css">
-	<script src="script.js"></script>
 </head>
 
 <body style="width: 350px; margin: 0;">
@@ -24,7 +23,7 @@
 		<div class="form">
 			<div>
 			<label>Enter Text Here</label><br>
-			<textarea id="message" class="textbox" style="height: 4em;">Hello</textarea>
+			<textarea id="message" style="height: 4em; width: 75%; resize: none;"></textarea>
 			<div class="space"></div>
 			<button class="paste">Paste Highlighted</button><br>
 			</div>
@@ -33,7 +32,8 @@
 
 			<div>
 			<label>Enter Password</label><br>
-			<textarea id="password" class="textbox" style="height: 2em;">Pass</textarea><br>
+			<input type="password" id="password" style="height: 2em; width: 75%;"><br><br>
+			<input type="checkbox" id="checkbox">Show Password
 			<div class="space"></div>
 			<button class="paste">Paste Highlighted</button><br>
 			</div>
@@ -41,8 +41,9 @@
 			<br><hr/>
 
 			<div>
-			<button class="submit" onclick="encryption_process()" id="encrypt">Encrypt</button>
-			<button class="submit" onclick="decryption_process()" id="decrypt">Decrypt</button>
+			<button class="submit" id="encrypt">Encrypt</button>
+			<button class="submit" id="decrypt">Decrypt</button>
+			<script src="script.js"></script>
 			</div>
 
 			<hr/>
