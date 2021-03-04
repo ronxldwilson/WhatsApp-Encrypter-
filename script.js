@@ -1,3 +1,12 @@
+var encryptButton = document.getElementById("encrypt");
+encryptButton.addEventListener('click', function() {encryption_process();});
+
+var decryptButton = document.getElementById("decrypt");
+decryptButton.addEventListener('click', function() {decryption_process();});
+
+var passwordCheckbox = document.getElementById("checkbox");
+passwordCheckbox.addEventListener('click', function() {password_checkbox();});
+
 var GRINDER_CAPACITY = 95;
 
 
@@ -39,6 +48,7 @@ function encrypt(meat, salt, multiplier) {
     return string(bacon);
 }
 
+
 function decrypt(bacon, salt, multiplier, print_mode) {
 	var instance, i, a, b, c;
 	var bacon_length = bacon.length;
@@ -63,7 +73,6 @@ function decrypt(bacon, salt, multiplier, print_mode) {
                 print(char_grinder(c, "NUM"));
             else
                 meat[i] = char_grinder(c,  'NUM');
-			console.log(a, b, c);
 		}
 	}
     return string(meat);
@@ -107,4 +116,16 @@ function char_grinder(package, package_type) {
 
 function string(list) {
     return list.join('');
+}
+
+
+
+function password_checkbox() {
+	var x = document.getElementById("password");
+	if (x.type === "password") {
+		x.type = "text";
+	}
+	else {
+		x.type = "password";
+	}
 }
