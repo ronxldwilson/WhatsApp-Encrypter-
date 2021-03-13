@@ -23,19 +23,17 @@
 		<div class="form">
 			<div>
 			<label>Enter Text Here</label><br>
-			<textarea id="message" style="height: 4em; width: 75%; resize: none;"></textarea>
+			<textarea id="message" style="height: 4em; width: 95%; resize: none;"></textarea>
 			<div class="space"></div>
-			<button class="paste">Paste Highlighted</button><br>
 			</div>
 
 			<br><hr/><br>
 
 			<div>
 			<label>Enter Password</label><br>
-			<input type="password" id="password" style="height: 2em; width: 75%;"><br><br>
+			<input type="password" id="password" style="height: 2em; width: 95%;"><br><br>
 			<input type="checkbox" id="checkbox">Show Password
 			<div class="space"></div>
-			<button class="paste">Paste Highlighted</button><br>
 			</div>
 
 			<br><hr/>
@@ -44,12 +42,17 @@
 			<button class="submit" id="encrypt">Encrypt</button>
 			<button class="submit" id="decrypt">Decrypt</button>
 			<script src="script.js"></script>
+			<script src="algorithm.js"></script>
 			</div>
 
 			<hr/>
 
 			<div class="result">
 			<p id="InsertResultHere"></p>
+			</div>
+
+			<div style="display: none;" id="copiedMessage">
+			<p>[Copied to Clipboard]</p>
 			</div>
 		</div>
 	</div>
