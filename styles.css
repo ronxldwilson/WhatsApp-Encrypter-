@@ -27,7 +27,12 @@ hr {
 	border-width: 1px;
 	border-color: #EEE;
 }
-
+input{
+	font-size: larger;
+}
+textarea{
+	font-size: larger;
+}
 .form {
 	padding: 0 6% 6% 6%;
 }
