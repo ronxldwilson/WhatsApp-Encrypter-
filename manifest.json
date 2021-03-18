@@ -1,11 +1,15 @@
 {
-    "name": "WhatsApp Encrypter",
-    "version": "1.0",
-    "manifest_version": 2,
-    "background":{
+  "manifest_version": 2,
 
-    },
-    "browser_action":{
-        "default_popup":"popup.html"
-    }
+  "name": "Web Text Encrypter",
+  "description": "This extension perform symmetrix encryption on any selected text",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
 }

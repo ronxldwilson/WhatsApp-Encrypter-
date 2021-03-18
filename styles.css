@@ -1,0 +1,126 @@
+body {
+	font-family: 'Helvetica';
+	color: white;
+}
+
+h1 {
+	font-size: 26px;
+	font-family: 'Avantgarde';
+	padding: 2px;
+	margin: 2%;
+
+	color: black;
+	float: left;
+}
+
+@font-face {
+	font-family: 'Avantgarde';
+	src: url(Fonts/avantgarde-bk-bt-2-cufonfonts-webfont/AVGARDD_2.woff);
+}
+
+hr {
+	background: rgb(0,255,221);
+	background: linear-gradient(90deg, rgba(0,255,221,1) 0%, rgba(255,0,254,1) 100%);
+
+	width: 98%;
+	height: 0.1px;
+	border-width: 1px;
+	border-color: #EEE;
+}
+input{
+	font-size: larger;
+}
+textarea{
+	font-size: larger;
+}
+.form {
+	padding: 0 6% 6% 6%;
+}
+
+button {
+	cursor: pointer;
+	background: transparent;
+	transition-duration: 0.1s;
+	outline: none;
+
+	border-width: 2px;
+	border-radius: 4px;
+}
+
+.main {
+	background: #282832;
+	border: 2px solid #666;
+}
+
+.navbar {
+	/*background: #6B7F98;*/
+	background: rgb(107,127,152);
+	background: linear-gradient(90deg, rgba(107,127,152,1) 19%, rgba(255,0,53,1) 100%);
+	margin: 0;
+	overflow: auto;
+}
+
+.navsep {
+	height: 4px;
+	margin: auto;
+	width: 97.3%;
+
+	border-width: 4px;
+	border-color: #555;
+}
+
+.paste {
+	background: #DDD;
+	float: right;
+	font-size: 12px;
+	border-width: 1px;
+}
+
+.paste:hover {
+	box-shadow: 4px 4px 5px #6B7F98;
+}
+
+.paste:active {
+	transform: translateY(2px) translateX(2px);
+	box-shadow: 2px 2px 0px #6B7F98;
+}
+
+
+.submit {
+	width: 40%;
+	height: 50px;
+	font-size: 16px;
+	margin: 4%;
+	color: #EEE;
+
+	border-style: solid;
+	border-color: #FF0080;
+	border-width: 5px;
+	transition: border-color 0.3s ease;
+}
+
+.submit#encrypt:hover {
+	border-color: #22BB33;
+}
+
+.submit#decrypt:hover {
+	border-color: #e8bf3a;
+}
+
+#copiedMessage {
+	font-size: 12px;
+	color: #A8A8A8;
+}
+
+.settings {
+	background: transparent;
+	padding: 2px;
+	margin: 2px;
+	border: none;
+	float: right;
+	box-shadow: none;
+}
+
+.space {
+	height: 8px;
+}

@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" href="DESIGN.css">
-    <style type="text/css">
-        body {
-           height: 300px;
-        }
-    </style>
-    <link rel="stylesheet" href="DESIGN.css" >
+    <title>Web Encrypter</title>
 
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="padding: 10%;">
-    <h1 style="padding: 10%;">WhatsApp Encrypter</h1>
-    <form>
-        <label>Enter Text Here</label><br>
-        <input type="text"><br>
-        <label>Enter Password</label><br>
-        <input type="text"><br>
-        <button>Encrypt</button>
-        <button>Decrypt</button>
-       
-    </form>
+<body style="width: 350px; margin: 0;">
+    
+	<div class="main">
+		<div class="navbar">
+			<h1>WEB ENCRYPTER</h1>
+			<button class="settings"><img src="settings.png" style="width: 40px; vertical-align: baseline;"></img></button>
+		</div>
+
+		<hr class="navsep"/>
+		<br/>
+
+		<div class="form">
+			<div>
+			<label>Enter Text Here</label><br>
+			<textarea id="message" style="height: 4em; width: 95%; resize: none;"></textarea>
+			<div class="space"></div>
+			</div>
+
+			<br><hr/><br>
+
+			<div>
+			<label>Enter Password</label><br>
+			<input type="password" id="password" style="height: 2em; width: 95%;"><br><br>
+			<input type="checkbox" id="checkbox">Show Password
+			<div class="space"></div>
+			</div>
+
+			<br><hr/>
+
+			<div>
+			<button class="submit" id="encrypt">Encrypt</button>
+			<button class="submit" id="decrypt">Decrypt</button>
+			<script src="script.js"></script>
+			<script src="algorithm.js"></script>
+			</div>
+
+			<hr/>
+
+			<div class="result">
+			<p id="InsertResultHere"></p>
+			</div>
+
+			<div style="display: none;" id="copiedMessage">
+			<p>[Copied to Clipboard]</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
