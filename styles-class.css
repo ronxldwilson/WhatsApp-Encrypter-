@@ -1,0 +1,79 @@
+
+.form {
+	padding: 0 6% 6% 6%;
+}
+
+.main {
+	background: #282832;
+	border: 2px solid #666;
+}
+
+.navbar {
+	/*background: #6B7F98;*/
+	background: rgb(107,127,152);
+	background: linear-gradient(90deg, rgba(107,127,152,1) 19%, rgba(255,0,53,1) 100%);
+	margin: 0;
+	overflow: auto;
+}
+
+.navsep {
+	height: 4px;
+	margin: auto;
+	width: 97.3%;
+	border-width: 4px;
+	border-color: #555;
+}
+
+.paste {
+	background: #DDD;
+	float: right;
+	font-size: 12px;
+	border-width: 1px;
+}
+
+.paste:hover {
+	box-shadow: 4px 4px 5px #6B7F98;
+}
+
+.paste:active {
+	transform: translateY(2px) translateX(2px);
+	box-shadow: 2px 2px 0px #6B7F98;
+}
+
+
+.submit {
+	width: 40%;
+	height: 50px;
+	font-size: 16px;
+	margin: 4%;
+	color: #EEE;
+
+	border-style: solid;
+	border-color: #FF0080;
+	border-width: 5px;
+	transition: border-color 0.3s ease;
+}
+
+.submit#encrypt:hover {
+	border-color: #22BB33;
+}
+
+.submit#decrypt:hover {
+	border-color: #e8bf3a;
+}
+
+.settings {
+	background: transparent;
+	padding: 2px;
+	margin: 2px;
+	border: none;
+	float: right;
+	box-shadow: none;
+	
+}
+.settings img{
+	width: 40px; vertical-align: baseline;
+}
+.space {
+	height: 8px;
+}
