@@ -15,3 +15,5 @@ Steps to install Web Encrypter in Chrome:
 3.  In Chrome go to the extensions page (chrome://extensions).
 4.  Enable Developer Mode.
 5.  Drag the WhatsApp-Encrypter- folder anywhere on the page to import it (do not delete the folder afterwards).
+
+The Extension is ready for use.
